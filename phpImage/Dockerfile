@@ -1,8 +1,8 @@
 FROM php:7.2
 
-#RUN apt-get install -y libxml2
-
-#RUN docker-php-ext-install xml
+RUN apt-get update
+RUN apt-get install -y git unzip
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 WORKDIR /server
 
